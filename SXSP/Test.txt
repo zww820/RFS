@@ -1,0 +1,16 @@
+*** Settings ***
+Resource          _test.txt
+
+*** Test Cases ***
+test
+    ${D}=    _Test    C
+    ${A}    Set Variable    ${D[0]}
+    ${B}    Set Variable    ${D[1]}
+    ${c}    Evaluate    ''.join(${D})
+    log    ${c}
+
+test2
+    [Template]
+    ${b}    Set Variable    我的
+    ${c}    Set Variable    你的
+    log    ${b}+${c}

@@ -1,0 +1,7 @@
+*** Keywords ***
+_Test
+    [Arguments]    ${C}
+    ${A}    Set Variable    A
+    ${B}    Set Variable    B
+    log    ${C}
+    [Return]    ${A}    ${B}

@@ -1,0 +1,12 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Test Cases ***
+open
+    Open Browser    http://19.48.17.201:8018/    gc
+    Maximize Browser Window
+    Input Text    staffId    superuser
+    Input Password    password    123456Qw
+    Click Element    btnSubmit
+    Sleep    2
+    Click Element    //h4[contains(text(),'目录库管理')]

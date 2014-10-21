@@ -1,0 +1,3 @@
+*** Settings ***
+Suite Teardown    杀进程
+Resource          其他.txt
