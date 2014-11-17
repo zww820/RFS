@@ -3,7 +3,7 @@ Library           Selenium2Library
 
 *** Test Cases ***
 open
-    Open Browser    http://19.48.17.201:8018/    ff
+    Open Browser    http://19.48.17.201:8018/    gc
     Maximize Browser Window
     Input Text    staffId    superuser
     Input Password    password    123456Qw
