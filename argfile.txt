@@ -5,7 +5,3 @@ C:\RFS\output
 off 
 --monitorwidth
 105
---suite
-SXSP.01登录
---test
-SXSP.01登录.01登录 
