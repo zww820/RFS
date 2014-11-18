@@ -19,5 +19,5 @@ _查询并进入事项表单
     Select Frame    iframe2
     Input Text    toDoMissionParam.keyWord    ${sqrmc}申请的${mattername}
     Click Element    btnSearch
-    Sleep    3
+    Sleep    5
     Click Element    //span[contains(.,'${sqrmc}申请的${mattername}')]

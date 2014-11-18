@@ -1,3 +1,3 @@
 *** Keywords ***
 杀进程
-    Comment    Evaluate    os.system('taskkill /F /IM chromedriver.exe')    os
+    Evaluate    os.system('taskkill /F /IM chromedriver.exe')    os

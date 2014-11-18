@@ -2,7 +2,7 @@
 Resource          _登录.txt
 
 *** Test Cases ***
-01登录
+011登录
     [Tags]    1
     _打开浏览器
     _登录    xhy    1234!@#$
