@@ -1,11 +1,11 @@
 *** Settings ***
-Resource          _功能菜单.txt
-Resource          _事项页面.txt
-Resource          _事项登记列表.txt
+Resource          key_功能菜单.txt
+Resource          key_事项页面.txt
+Resource          key_事项登记列表.txt
 
 *** Test Cases ***
 021事项登记
     [Tags]    1
-    _事项登记
-    _查询并登记    危险化学品安全使用许可证的核发（初次申领）
-    _事项数据录入
+    事项登记
+    查询并登记    危险化学品安全使用许可证的核发（初次申领）
+    事项数据录入

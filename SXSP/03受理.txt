@@ -1,13 +1,13 @@
 *** Settings ***
-Resource          _事项页面.txt
-Resource          _功能菜单.txt
-Resource          _事项登记列表.txt
+Resource          key_事项页面.txt
+Resource          key_功能菜单.txt
+Resource          key_事项登记列表.txt
 
 *** Test Cases ***
 031返回待办列表
     [Tags]    1
-    _待办任务
+    待办任务
 
 032事项表单页面
     [Tags]    1
-    _查询并进入事项表单
+    查询并进入事项表单
