@@ -1,0 +1,31 @@
+﻿--outputdir
+ C:\RFS\output
+ --monitorcolors
+off 
+--monitorwidth
+90
+--suite
+SXSP.01登录
+--test
+SXSP.01登录.01登录
+--suite
+SXSP.02功能菜单
+--test
+SXSP.02功能菜单.01事项登记
+--suite
+SXSP.03主页面
+--test
+SXSP.03主页面.01事项登记
+--suite
+SXSP.03主页面
+--test
+SXSP.03主页面.02事项页面
+--suite
+SXSP.02功能菜单
+--test
+SXSP.02功能菜单.02待办任务
+--suite
+SXSP.03主页面
+--test
+SXSP.03主页面.03待办任务
+
