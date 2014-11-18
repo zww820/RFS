@@ -1,6 +1,7 @@
 *** Settings ***
 Resource          _页面.txt
 Resource          _事项页面.txt
+Resource          _功能菜单.txt
 
 *** Test Cases ***
 01事项登记

@@ -11,5 +11,5 @@ _登录
     Element Should Contain    //div[@class='user']    欢迎您登录审批管理系统！    Login Failed!
 
 _打开浏览器
-    Open Browser    http://19.48.17.201:7007/app/    ff
+    Open Browser    http://19.48.17.201:7007/app/    gc
     Maximize Browser Window
