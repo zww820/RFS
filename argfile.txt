@@ -8,4 +8,4 @@ off
 --suite
 SXSP.01登录
 --test
-SXSP.01登录.01登录 的
+SXSP.01登录.01登录 
