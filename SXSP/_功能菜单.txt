@@ -7,6 +7,5 @@ _事项登记
     Click Element    //span[contains(.,"事项登记")]
 
 _待办任务
-    Select Window
     Element Should Contain    //span[contains(.,"待办任务")]    待办任务    Can't find menu“待办任务”
     Click Element    //span[contains(.,"待办任务")]

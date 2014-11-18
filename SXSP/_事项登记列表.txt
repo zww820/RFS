@@ -3,7 +3,7 @@ Library           Selenium2Library
 Variables         Variables/values/form.py
 
 *** Keywords ***
-_事项注册
+_查询并登记
     [Arguments]    ${mattername1}
     Select Frame    iframe2
     Wait Until Page Contains Element    btnSearch    5    Can't find button of [查询]
@@ -15,7 +15,7 @@ _事项注册
     Click Element    //a/span[contains(.,'登记')]
     Page Should Contain    事项登记
 
-_待办任务
+_查询并进入事项表单
     Select Frame    iframe2
     Input Text    toDoMissionParam.keyWord    ${sqrmc}申请的${mattername}
     Click Element    btnSearch

@@ -1,17 +1,18 @@
 *** Settings ***
-Resource          _页面.txt
 Resource          _事项页面.txt
 Resource          _功能菜单.txt
+Resource          _事项登记列表.txt
 
 *** Test Cases ***
-01事项登记
+01返回待办列表
     [Tags]    1
-    _事项注册    危险化学品安全使用许可证的核发（初次申领）
+    _查询并进入事项表单
 
 02事项页面
     [Tags]    1
-    _事项页面
+    _事项数据录入
+    _查询并进入事项表单
 
 03待办任务
     [Tags]    2
-    _待办任务
+    _查询并进入事项表单
