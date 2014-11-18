@@ -9,7 +9,3 @@ off
 SXSP.01登录
 --test
 SXSP.01登录.01登录
---suite
-SXSP.02功能菜单
---test
-SXSP.02功能菜单.01事项登记
