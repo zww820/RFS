@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          key_登录.txt
+
+*** Test Cases ***
+000mh登录
+    打开浏览器    http://19.48.15.232:9009/
+    mh点击网上办事大厅
+    mh用户登录    zww163    123456

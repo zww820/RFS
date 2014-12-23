@@ -1,8 +1,0 @@
-*** Settings ***
-Resource          key_登录.txt
-
-*** Test Cases ***
-011登录
-    [Tags]    1
-    打开浏览器
-    登录    xhy    1234!@#$

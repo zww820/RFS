@@ -1,0 +1,39 @@
+*** Settings ***
+Library           Selenium2Library
+Variables         Variables/values/form.py
+
+*** Keywords ***
+查询事项
+    [Arguments]    ${mattername}
+    Input Text    serchBar    ${mattername}
+    Click Element    search
+
+点击在线申办
+    Click LInk    //td[contains(text(),'珠海市安全生产监督管理局')]/following-sibling::td/div[1]/a
+    sleep    2
+    Select Window    珠海事项审批系统-业务办理--申报指引
+    Title Should Be    珠海事项审批系统-业务办理--申报指引
+    Click Link    //a[contains(text(),'继续')]
+
+事项数据录入
+    sleep    5
+    Title Should Be    申办表单处理
+    Select Frame    handleFrameName
+    Wait Until Page Contains Element    sqrmc$value    10
+    Input Text    sqrmc$value    ${value}
+    Wait Until Page Contains Element    lxrxm$value
+    Input Text    lxrxm$value    ${value}
+    Wait Until Page Contains Element    lxrsj$value
+    Input Text    lxrsj$value    ${value}
+    Wait Until Page Contains Element    lxrsj$value
+    Input Text    lxrsj$value    18819153582
+    Wait Until Page Contains Element    text2$value
+    Input Text    text2$value    ${value}
+    Wait Until Page Contains Element    text3$value
+    Input Text    text3$value    ${value}
+    Wait Until Page Contains Element    text15$value
+    Input Text    text15$value    ${value}
+    Wait Until Page Contains Element    btnSubmit
+    Click Link    btnSubmit
+    Choose Ok On Next Confirmation
+    Confirm Action

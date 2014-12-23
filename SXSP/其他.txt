@@ -1,3 +1,10 @@
+*** Settings ***
+Library           Selenium2Library
+
 *** Keywords ***
 杀进程
     Evaluate    os.system('taskkill /F /IM chromedriver.exe')    os
+
+判断页面是否加载完成
+    ${ccc}    Execute Javascript    document.onreadystatechange=a;function a(){if(document.readyState=="complete")return 1;};var a;a=a();return a;
+    [Return]    ${ccc}

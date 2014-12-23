@@ -1,10 +1,10 @@
 *** Settings ***
-Resource          key_功能菜单.txt
-Resource          key_事项页面.txt
-Resource          key_事项登记列表.txt
+Resource          key_wb功能菜单.txt
+Resource          key_wb事项页面.txt
+Resource          key_ wb事项登记列表.txt
 
 *** Test Cases ***
-021事项登记
+120事项登记
     [Tags]    1
     事项登记
     查询并登记    危险化学品安全使用许可证的核发（初次申领）

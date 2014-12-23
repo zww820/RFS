@@ -1,0 +1,24 @@
+*** Settings ***
+Library           Selenium2Library
+Variables         Variables/values/form.py
+
+*** Keywords ***
+查询并登记
+    [Arguments]    ${mattername1}
+    Select Frame    iframe2
+    Wait Until Page Contains Element    btnSearch    5    Can't find button of [查询]
+    Log    Go to page of ”事项登记“ Success!
+    Input Text    name    ${mattername1}
+    Set Global Variable    ${mattername}    ${mattername1}
+    Click Element    btnSearch
+    Sleep    3
+    Click Element    //a/span[contains(.,'登记')]
+    Page Should Contain    事项登记
+
+查询并进入事项表单
+    Select Frame    iframe2
+    Sleep    3
+    Input Text    //td[contains(text(),'关键字：')]/following-sibling::td[1]/input    ${sqrmc}申请的${mattername}
+    Click Element    btnSearch
+    Sleep    5
+    Click Element    //span[contains(.,'${sqrmc}申请的${mattername}')]

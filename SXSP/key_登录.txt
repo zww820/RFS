@@ -1,0 +1,35 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+wb输入用户名密码
+    [Arguments]    ${user}    ${pwd}
+    Input Text    staffId    ${user}
+    Input Password    password    ${pwd}
+    Click Element    btnSubmit
+    Sleep    3
+    Element Should Contain    //div[@class='user']    欢迎您登录网上办事系统！    Login Failed!
+
+打开浏览器
+    [Arguments]    ${address}
+    Open Browser    ${address}    gc
+    Maximize Browser Window
+    Comment    ${ddd}    Execute Javascript    $(function(){funciton test(){return 1;}})
+    Comment    ${ddd}    Execute Javascript    window.onload=function(){function a(){return 1;}}
+    Comment    Execute Javascript    window.onload=function(){function a(){return 1;}}
+    Comment    ${ddd}    Execute Javascript    return 1
+    Comment    log    ${ddd}
+
+mh点击网上办事大厅
+    Click Element    //tr[1]/td[3]/li[1]/a
+
+mh输入用户名密码
+
+mh用户登录
+    [Arguments]    ${user}    ${pwd}
+    Click Element    //a/font[contains(text(),'用户登录')]/..
+    Input text    account    ${user}
+    Input Password    password    ${pwd}
+    Focus    validnum
+    Sleep    5
+    Click Image    images/BtnLogin.gif

@@ -1,0 +1,20 @@
+*** Settings ***
+Resource          key_wb事项页面.txt
+Resource          key_wb功能菜单.txt
+Resource          key_ wb事项登记列表.txt
+
+*** Test Cases ***
+1310返回待办列表
+    [Tags]    1
+    待办任务
+
+1311事项表单页面
+    [Tags]    1
+    查询并进入事项表单
+
+1312受理并处理事项
+    点击[处理]
+    提示窗口确认
+    sleep    1
+    提示窗口确认
+    关闭弹窗    打印通知单
