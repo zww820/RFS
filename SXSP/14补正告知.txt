@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          key_wb事项页面.txt
+
+*** Test Cases ***
+140补正告知
+    补正告知
+    提示窗口确认
+    sleep    2
+    提示窗口确认
+    sleep    1
+    关闭弹窗    打印通知单

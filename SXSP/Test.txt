@@ -14,3 +14,5 @@ test2
     ${b}    Set Variable    我的
     ${c}    Set Variable    你的
     log    ${b}+${c}
+    ${cc}    Evaluate    time.strftime('%Y%m%d%H%M%S')    time
+    log    ${cc}

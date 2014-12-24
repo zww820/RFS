@@ -23,6 +23,24 @@ Resource          其他.txt
     Confirm Action
 
 补正告知
+    Select Window    珠海市网上办事系统
+    Select Frame    iframe2
+    Wait Until Element Is Visible    supplementBtn
+    Click Link    supplementBtn
+    Select Frame    handleFrameName
+    Wait Until Element Is Visible    bzgzyy$value
+    ${currenttime}    Evaluate    time.strftime('%Y%m%d%H%M%S')    time
+    Input Text    bzgzyy$value    补正告知原因${currenttime}
+    ${countrow1}    Get Matching Xpath Count    //div/table/tbody/tr
+    ${countrow}    Evaluate    random.randint(3,${countrow1}-5)    random
+    Select Frame    repaireList
+    Select Checkbox    //div/table/tbody/tr[${countrow}]/td[4]/div/input
+    Select Window    珠海市网上办事系统
+    Select Frame    iframe2
+    Select Frame    handleFrameName
+    sleep    2
+    Click Link    btnAdd
+    sleep    1
 
 点击[处理]
     Wait Until Element Is Visible    receiveAndDo
@@ -42,6 +60,8 @@ Resource          其他.txt
     [Arguments]    ${title}
     [Documentation]    *input the popup window title
     Select Window    ${title}
+    Title Should Be    ${title}
+    sleep    3
     Close Window
 
 延期申请

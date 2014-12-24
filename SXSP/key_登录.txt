@@ -24,8 +24,6 @@ mh点击网上办事大厅
     Click Element    //tr[1]/td[3]/li[1]/a
 
 mh输入用户名密码
-
-mh用户登录
     [Arguments]    ${user}    ${pwd}
     Click Element    //a/font[contains(text(),'用户登录')]/..
     Input text    account    ${user}
