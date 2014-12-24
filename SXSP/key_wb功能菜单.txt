@@ -6,7 +6,7 @@ Library           Selenium2Library
     Element Should Contain    //span[contains(.,"事项登记")]    事项登记    Can't find menu“事项登记”
     Click Element    //span[contains(.,"事项登记")]
 
-待办任务
+点击待办任务
     sleep    2
     Select Window    珠海市网上办事系统
     Element Should Contain    //span[contains(.,"待办任务")]    待办任务    Can't find menu“待办任务”

@@ -1,16 +1,14 @@
 *** Settings ***
 Resource          key_wb事项页面.txt
 Resource          key_wb功能菜单.txt
-Resource          key_ wb事项登记列表.txt
+Resource          key_ 查询.txt
 
 *** Test Cases ***
 1310返回待办列表
-    [Tags]    1
-    待办任务
+    点击待办任务
 
-1311事项表单页面
-    [Tags]    1
-    查询并进入事项表单
+1311进入事项页面
+    sl查询并进入事项表单
 
 1312受理并处理事项
     点击[处理]

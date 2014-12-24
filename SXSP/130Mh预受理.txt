@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          key_ 查询.txt
+Resource          key_wb功能菜单.txt
+
+*** Test Cases ***
+1300进入事项页面
+    点击待办任务
+    ysl查询并进入事项表单

@@ -43,3 +43,7 @@ Resource          其他.txt
     [Documentation]    *input the popup window title
     Select Window    ${title}
     Close Window
+
+延期申请
+
+特别程序申请

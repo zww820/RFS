@@ -3,11 +3,6 @@ Library           Selenium2Library
 Variables         Variables/values/form.py
 
 *** Keywords ***
-查询事项
-    [Arguments]    ${mattername}
-    Input Text    serchBar    ${mattername}
-    Click Element    search
-
 点击在线申办
     Click LInk    //td[contains(text(),'珠海市安全生产监督管理局')]/following-sibling::td/div[1]/a
     sleep    2
@@ -21,6 +16,8 @@ Variables         Variables/values/form.py
     Select Frame    handleFrameName
     Wait Until Page Contains Element    sqrmc$value    10
     Input Text    sqrmc$value    ${value}
+    ${sqrmc}    Get Value    sqrmc$value
+    Set Global Variable    ${mhsqrmc}    ${sqrmc}
     Wait Until Page Contains Element    lxrxm$value
     Input Text    lxrxm$value    ${value}
     Wait Until Page Contains Element    lxrsj$value

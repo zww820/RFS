@@ -1,9 +1,10 @@
 *** Settings ***
 Resource          key_mh申办事项.txt
+Resource          key_ 查询.txt
 
 *** Test Cases ***
-010mh查询事项
-    查询事项    危险化学品安全使用许可证的核发（初次申领）
+010mh查询并申办事项
+    mh查询事项    危险化学品安全使用许可证的核发（初次申领）
     点击在线申办
 
 011mh事项数据录入
