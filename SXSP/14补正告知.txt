@@ -1,11 +1,22 @@
 *** Settings ***
-Resource          key_wb事项页面.txt
+Resource          key_wb事项登记.txt
+Resource          key_wb补齐补正.txt
+Resource          key_公共.txt
+Resource          key_wb功能菜单.txt
+Resource          key_ 查询.txt
 
 *** Test Cases ***
 140补正告知
     补正告知
+    Comment    补正告知1
     提示窗口确认
     sleep    2
     提示窗口确认
     sleep    1
-    关闭弹窗    打印通知单
+    关闭打印通知单弹窗
+
+141补正受理
+    点击在办任务
+    sl查询并进入事项表单
+    补正受理
+    提示窗口确认

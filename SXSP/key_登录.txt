@@ -3,16 +3,15 @@ Library           Selenium2Library
 
 *** Keywords ***
 wb输入用户名密码
-    [Arguments]    ${user}    ${pwd}
-    Input Text    staffId    ${user}
-    Input Password    password    ${pwd}
+    Input Text    staffId    xhy
+    Input Password    password    2
     Click Element    btnSubmit
     Sleep    3
     Element Should Contain    //div[@class='user']    欢迎您登录网上办事系统！    Login Failed!
 
 打开浏览器
     [Arguments]    ${address}
-    Open Browser    ${address}    gc
+    Open Browser    ${address}    gc    mianbrowser
     Maximize Browser Window
     Comment    ${ddd}    Execute Javascript    $(function(){funciton test(){return 1;}})
     Comment    ${ddd}    Execute Javascript    window.onload=function(){function a(){return 1;}}

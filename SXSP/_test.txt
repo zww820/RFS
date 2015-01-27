@@ -1,3 +1,8 @@
+*** Settings ***
+Library           Collections
+Library           HttpLibrary.HTTP
+Library           RequestsLibrary
+
 *** Keywords ***
 _Test
     [Arguments]    ${C}
@@ -5,3 +10,10 @@ _Test
     ${B}    Set Variable    B
     log    ${C}
     [Return]    ${A}    ${B}
+
+_test3
+    ${a}    Set Variable    a    b    c
+    ${b}    Evaluate    ${a}[1]
+    log    ${b}
+
+打开浏览器

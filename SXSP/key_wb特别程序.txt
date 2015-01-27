@@ -1,0 +1,23 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+特别程序申请
+    Select Window    珠海市网上办事系统
+    Select Frame    iframe2
+    Wait Until Element Is Visible    specialBtn
+    Click Link    specialBtn
+    Select Frame    handleFrameName
+    ${number}    Evaluate    random.randint(1,12)    random
+    : FOR    ${number}    IN RANGE    13
+    \    ${countrow}    Evaluate    random.randint(1,2)    random
+    \    ${countcolumn}    Evaluate    random.randint(1,5)    random
+    \    Wait Until Element Is Visible    //div[@id='tbcxzlmc']/div/table/tbody/tr[${countrow}]/td[${countcolumn}]/div/input
+    \    Select Checkbox    //div[@id='tbcxzlmc']/div/table/tbody/tr[${countrow}]/td[${countcolumn}]/div/input
+    Wait Until Element Is Visible    tbcxqdly$value
+    Input Text    tbcxqdly$value    特别程序理由${currenttime}
+    sleep    2
+    Click Link    btnAdd
+    sleep    1
+
+延期申请

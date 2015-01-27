@@ -1,11 +1,11 @@
 *** Settings ***
 Resource          key_wb功能菜单.txt
-Resource          key_wb事项页面.txt
+Resource          key_wb事项登记.txt
 Resource          key_ 查询.txt
 
 *** Test Cases ***
 120事项登记
     [Tags]    1
     事项登记
-    wb查询并登记    危险化学品安全使用许可证的核发（初次申领）
+    wb查询并登记
     事项数据录入

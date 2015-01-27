@@ -1,0 +1,3 @@
+*** Settings ***
+Suite Teardown    killbrowserdriver
+Resource          key3.txt

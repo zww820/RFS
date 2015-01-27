@@ -1,0 +1,23 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+关闭打印通知单弹窗
+    Select Window    打印通知单
+    sleep    2
+    Execute Javascript    window.close()
+    Wait Until Keyword Succeeds    30s    1s    Select Window    珠海市网上办事系统
+
+提示窗口确认
+    Choose Ok On Next Confirmation
+    Confirm Action
+
+待办点击[处理]
+    Wait Until Element Is Visible    receiveAndDo
+    Click Link    receiveAndDo
+    comment    ${a}    判断页面是否加载完成
+    comment    Should Be True    ${a}==1
+    Select Frame    handleFrameName
+    sleep    2
+    Click link    btnAdd
+    sleep    1

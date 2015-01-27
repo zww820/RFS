@@ -1,0 +1,24 @@
+*** Settings ***
+Library           Selenium2Library
+Variables         Variables/values/form.py
+Resource          其他.txt
+
+*** Keywords ***
+事项数据录入
+    Sleep    5
+    Select Frame    iframe2
+    Select Frame    handleFrameId
+    Wait Until Page Contains Element    //span[@id='sqrzjhm']/span/input
+    Input Text    //span[@id='sqrzjhm']/span/input    ${value}
+    Input Text    sqrmc$value    ${value}
+    ${sqrmc1}    Get Value    //input[@id='sqrmc$value']
+    Set Global Variable    ${sqrmc}    ${sqrmc1}
+    Input Text    lxrxm$value    ${value}
+    Input Text    text18$value    330719196804253671
+    Input Text    lxrsj$value    18819153582
+    Input Text    text2$value    ${value}
+    Input Text    text3$value    ${value}
+    Input Text    text15$value    ${value}
+    Click Link    btnSubmit
+    Choose Ok On Next Confirmation
+    Confirm Action

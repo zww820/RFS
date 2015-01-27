@@ -4,12 +4,11 @@ Variables         Variables/values/form.py
 
 *** Keywords ***
 wb查询并登记
-    [Arguments]    ${mattername1}
     Select Frame    iframe2
     Wait Until Page Contains Element    btnSearch    5    Can't find button of [查询]
     Log    Go to page of ”事项登记“ Success!
-    Input Text    name    ${mattername1}
-    Set Global Variable    ${mattername}    ${mattername1}
+    Input Text    name    危险化学品安全使用许可证的核发（初次申领）
+    Set Global Variable    ${mattername}    危险化学品安全使用许可证的核发（初次申领）
     Click Element    btnSearch
     Sleep    3
     Click Element    //a/span[contains(.,'登记')]
@@ -20,7 +19,7 @@ sl查询并进入事项表单
     Sleep    3
     Input Text    //td[contains(text(),'关键字：')]/following-sibling::td[1]/input    ${sqrmc}申请的${mattername}
     Click Element    btnSearch
-    Sleep    5
+    Sleep    3
     Click Element    //span[contains(.,'${sqrmc}申请的${mattername}')]
 
 ysl查询并进入事项表单
@@ -28,7 +27,7 @@ ysl查询并进入事项表单
     Sleep    3
     Input Text    //td[contains(text(),'关键字：')]/following-sibling::td[1]/input    ${mhsqrmc}申请的${mhmattername}
     Click Element    btnSearch
-    Sleep    5
+    Sleep    3
     Click Element    //span[contains(.,'${mhsqrmc}申请的${mhmattername}')]
 
 mh查询事项

@@ -1,7 +1,8 @@
 *** Settings ***
-Resource          key_wb事项页面.txt
+Resource          key_wb事项登记.txt
 Resource          key_wb功能菜单.txt
 Resource          key_ 查询.txt
+Resource          key_公共.txt
 
 *** Test Cases ***
 1310返回待办列表
@@ -11,8 +12,8 @@ Resource          key_ 查询.txt
     sl查询并进入事项表单
 
 1312受理并处理事项
-    点击[处理]
+    待办点击[处理]
     提示窗口确认
     sleep    1
     提示窗口确认
-    关闭弹窗    打印通知单
+    关闭打印通知单弹窗

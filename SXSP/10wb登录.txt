@@ -4,5 +4,5 @@ Resource          key_登录.txt
 *** Test Cases ***
 100wb登录
     [Tags]    1
-    打开浏览器    http://19.48.17.201:7007/app/
-    wb输入用户名密码    xhy    1234!@#$
+    打开浏览器    http://183.56.132.89:9012/app/
+    wb输入用户名密码

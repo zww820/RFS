@@ -3,6 +3,7 @@ Library           Selenium2Library
 
 *** Keywords ***
 杀进程
+    Set Log Level    TRACE
     Evaluate    os.system('taskkill /F /IM chromedriver.exe')    os
 
 判断页面是否加载完成

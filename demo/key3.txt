@@ -1,0 +1,5 @@
+*** Keywords ***
+killbrowserdriver
+    Set Log Level    TRACE
+    Evaluate    os.system('taskkill /F /IM chromedriver.exe')    os
+    Evaluate    os.system('taskkill /F /IM IEDriverServer.exe')    os

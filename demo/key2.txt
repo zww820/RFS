@@ -1,0 +1,9 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          key.txt
+
+*** Keywords ***
+查询内容
+    打开浏览器
+    查询    RobotFramework
+    查看教程

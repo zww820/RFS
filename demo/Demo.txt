@@ -1,0 +1,8 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          key2.txt
+
+*** Test Cases ***
+百度搜索
+    [Tags]    1
+    查询内容

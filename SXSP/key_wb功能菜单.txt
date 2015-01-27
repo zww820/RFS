@@ -11,3 +11,11 @@ Library           Selenium2Library
     Select Window    珠海市网上办事系统
     Element Should Contain    //span[contains(.,"待办任务")]    待办任务    Can't find menu“待办任务”
     Click Element    //span[contains(.,"待办任务")]
+    ${currenttime1}    Evaluate    time.strftime('%Y%m%d%H%M%S')    time
+    Set Global Variable    ${currenttime}    ${currenttime1}
+
+点击在办任务
+    sleep    5
+    Select Window    珠海市网上办事系统
+    Element Should Contain    //span[contains(.,"在办任务")]    在办任务    Can't find menu“在办任务”
+    Click Element    //span[contains(.,"在办任务")]

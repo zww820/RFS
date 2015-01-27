@@ -1,0 +1,20 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+打开浏览器
+    Open Browser    http://www.baidu.com    gc
+    Title Should Be    百度一下，你就知道
+    Maximize Browser Window
+
+查询
+    [Arguments]    ${searchcontent}
+    Element Should Be Visible     wd    找不到输入框
+    Input Text    wd    ${searchcontent}
+    Element Should Be Visible    su    找不到搜索按钮
+    Click Button    su
+    Wait Until Page Contains    ${searchcontent}_百度搜索
+    Title Should Be    ${searchcontent}_百度搜索
+
+查看教程
+    Click Link    //div/h3/a[contains(text(),'老道长的测试生活')]

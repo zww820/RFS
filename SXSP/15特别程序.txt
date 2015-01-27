@@ -1,0 +1,13 @@
+*** Settings ***
+Resource          key_wb事项登记.txt
+Resource          key_公共.txt
+Resource          key_wb特别程序.txt
+
+*** Test Cases ***
+150特别程序申请
+    特别程序申请
+    提示窗口确认
+    sleep    2
+    提示窗口确认
+    sleep    1
+    关闭打印通知单弹窗

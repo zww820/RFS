@@ -1,0 +1,46 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+补正告知
+    Select Window    珠海市网上办事系统
+    Select Frame    iframe2
+    Wait Until Element Is Visible    supplementBtn
+    Click Link    supplementBtn
+    Select Frame    handleFrameName
+    Wait Until Element Is Visible    bzgzyy$value
+    Input Text    bzgzyy$value    补正告知原因${currenttime}
+    ${countrow1}    Get Matching Xpath Count    //div/table/tbody/tr
+    ${countrow}    Evaluate    random.randint(4,${countrow1}-4)    random
+    Select Frame    repaireList
+    : FOR    ${i}    IN RANGE    3    ${countrow}
+    \    Select Checkbox    //div/table/tbody/tr[${i}]/td[4]/div/input
+    Select Window    珠海市网上办事系统
+    Select Frame    iframe2
+    Select Frame    handleFrameName
+    sleep    2
+    Click Link    btnAdd
+    sleep    1
+
+补正受理
+    Select Window    珠海市网上办事系统
+    Select Frame    iframe2
+    Wait Until Element Is Visible    suppAcceptBtn
+    Click Link    suppAcceptBtn
+    sleep    1
+    Select Frame    handleFrameName
+    Execute Javascript    window.scrollTo(0,document.body.scrollHeight)
+    Wait Until Element Is Visible    iframeDoc
+    Select Frame    iframeDoc
+    Execute Javascript    window.scrollTo(0,document.body.scrollHeight)
+    Wait Until Element Is Visible    //div/div[2]/div[2]/table/tbody/tr
+    ${checkboxnumber1}    Get Matching Xpath Count    //div/div[2]/div[2]/table/tbody/tr
+    ${checkboxnumber}    Evaluate    ${checkboxnumber1}+1
+    : FOR    ${i}    IN RANGE    1    ${checkboxnumber}
+    \    Select Checkbox    //tr[${i}]/td/div[contains(text(),'份数')]/input[1]
+    Select Window    珠海市网上办事系统
+    Select Frame    iframe2
+    Select Frame    handleFrameName
+    sleep    2
+    Click Link    btnAdd
+    sleep    1
