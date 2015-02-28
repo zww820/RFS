@@ -9,7 +9,7 @@ Library           Selenium2Library
 
 查询
     [Arguments]    ${searchcontent}
-    Element Should Be Visible     wd    找不到输入框
+    Element Should Be Visible    wd    找不到输入框
     Input Text    wd    ${searchcontent}
     Element Should Be Visible    su    找不到搜索按钮
     Click Button    su

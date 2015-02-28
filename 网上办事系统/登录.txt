@@ -1,0 +1,14 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+登录
+    [Arguments]    ${address}    ${user}    ${pwd}
+    Open Browser    ${address}    gc    mianbrowser
+    Maximize Browser Window
+    Click Element    //a/font[contains(text(),'用户登录')]/..
+    Input text    account    ${user}
+    Input Password    password    ${pwd}
+    Focus    validnum
+    Sleep    5
+    Click Image    images/BtnLogin.gif

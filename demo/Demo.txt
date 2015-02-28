@@ -1,8 +1,12 @@
 *** Settings ***
 Library           Selenium2Library
 Resource          key2.txt
+Resource          key4.txt
 
 *** Test Cases ***
 百度搜索
     [Tags]    1
     查询内容
+
+163邮箱
+    163邮箱登陆    163邮箱    163邮箱_百度搜索    zww820    !zhao_wei423!    网易邮箱6.0版

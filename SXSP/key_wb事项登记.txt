@@ -13,7 +13,7 @@ Resource          其他.txt
     Input Text    sqrmc$value    ${value}
     ${sqrmc1}    Get Value    //input[@id='sqrmc$value']
     Set Global Variable    ${sqrmc}    ${sqrmc1}
-    Input Text    lxrxm$value    ${value}
+    Input Text    lxrxm$value    w
     Input Text    text18$value    330719196804253671
     Input Text    lxrsj$value    18819153582
     Input Text    text2$value    ${value}

@@ -1,0 +1,26 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+163邮箱登陆
+    [Arguments]    ${search1}    ${result1}    ${search2}    ${search3}    ${result2}
+    Set Log Level    TRACE
+    OpenBrowser    http://www.baidu.com/
+    Maximize Browser Window
+    Input Text    id=kw    ${search1}
+    Click Button    id=su
+    Sleep    2
+    ${title}    get title
+    should contain    ${title}    ${result1}
+    Input Text    id=op_email3_username    ${search2}
+    Input Password    //input[@class='op_email3_password']    ${search3}
+    Comment    Click link    登录
+    Click Link    //a[@class='c-btn c-btn-large c-btn-primary c-gap-right op_email3_submit OP_LOG_BTN' and (text()='登录')]
+    ${a}    Get Window Titles
+    ${b}    Evaluate    ${a}[1]
+    Maximize Browser Window
+    Select Window    ${b}
+    Wait Until Page Contains Element    //a[contains(.,'退出')]
+    Wait Until Page Contains    zww820    30
+    ${title}    get title
+    should contain    ${title}    ${result2}

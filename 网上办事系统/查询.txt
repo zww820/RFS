@@ -1,0 +1,15 @@
+*** Settings ***
+Library           Selenium2Library
+Variables         Variables/values/form.py
+
+*** Keywords ***
+查询
+    Select Frame    iframe2
+    Wait Until Page Contains Element    btnSearch    5    Can't find button of [查询]
+    Log    Go to page of ”事项登记“ Success!
+    Input Text    name    危险化学品安全使用许可证的核发（初次申领）
+    Set Global Variable    ${mattername}    危险化学品安全使用许可证的核发（初次申领）
+    Click Element    btnSearch
+    Sleep    3
+    Click Element    //a/span[contains(.,'登记')]
+    Page Should Contain    事项登记
